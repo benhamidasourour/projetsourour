@@ -47,7 +47,7 @@
   <body>
     <?php if(!empty($message)) : ?>
       <p><?php echo $message; ?></p>
-    <?php endif; ?>
+    <?php //endif; ?>
     <form action="<?php echo htmlspecialchars($_SERVER['REQUEST_URI'], ENT_QUOTES); ?>" method="post">
       <fieldset>
         <legend>Identifiant</legend>
