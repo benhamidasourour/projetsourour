@@ -11,7 +11,7 @@
   *****************************************/
   // Si les champs login et mp sont définis alors le formulaire a été envoyé
  
-    if(isset($_GET["login"])&& isset($_GET["mp"]))
+   /* if(isset($_GET["login"])&& isset($_GET["mp"]))
      {
         // Le login est-il rempli ?
         if (empty($_GET['login']))
@@ -37,10 +37,30 @@
       else
        {
       // L'identification a réussi
-      $message = 'Bienvenue '. LOGIN .' !';
+      $message = 'Bienvenue '. LOGIN .' ! vous êtes connecté';
         }
      }
   else
+    { $message="utilisation incorrecte";
+      header('location: authentification-s.html');
+    }
+    echo $message;
+    */
+/**************************************************** */
+// version simplifié
+/**************************************************** */
+ // Si les champs login et mp sont définis alors le formulaire a été envoyé
+if(isset($_GET["login"],$_GET["mp"]))
+{ if ($_GET['login'] == LOGIN && $_GET['mp'] == PASSWORD)
+      $message = 'Bienvenue '. LOGIN .' ! vous êtes connecté';
+
+  else
+  { 
+    header('location: authentification-s.html'); //redirection vers le formulaire 
+  }
+}
+  else
   $message="utilisation incorrecte";
+
 echo $message;
 ?>
