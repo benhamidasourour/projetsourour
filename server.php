@@ -19,7 +19,7 @@ if (isset($_POST["nom"])&&isset($_POST["prenom"]))
        echo $_SERVER["REMOTE_ADDR"].'<br>';
        echo $_SERVER["SERVER_PORT"].'<br>';
        echo $_SERVER["HTTP_REFERER"].'<br>';
-       echo $_SERVER["DOCUMENT_DIR"].'<br>';
+       
       } 
     }
 ?>

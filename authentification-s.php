@@ -9,9 +9,10 @@
   /*****************************************
   *  Vérification du formulaire
   *****************************************/
- // Si les champs login et mp sont définis alors le formulaire a été envoyé
+   // Si les champs login et mp sont définis alors le formulaire a été envoyé
 if(isset($_GET["login"],$_GET["mp"]))
-{ if ($_GET['login'] == LOGIN && $_GET['mp'] == PASSWORD)
+{
+     if ($_GET['login'] == LOGIN && $_GET['mp'] == PASSWORD)
       $message = 'Bienvenue '. LOGIN .' ! vous êtes connecté';
 
     else
@@ -19,8 +20,8 @@ if(isset($_GET["login"],$_GET["mp"]))
       header('location: authentification-s.html'); //redirection vers le formulaire 
      }
 }
-  else
-  $message="utilisation incorrecte";
-
+    
+else
+ { $message="utilisation incorrecte";}
 echo $message;
 ?>
